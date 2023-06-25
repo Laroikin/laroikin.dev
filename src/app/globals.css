@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  body {
+    @apply bg-background text-foreground transition-colors duration-200;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .grid-bg {
+    background-size: 11px 11px;
+    background-position: center center;
+    background-image: linear-gradient(
+        to right,
+        rgba(128, 128, 128, 0.15) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(128, 128, 128, 0.15) 1px, transparent 1px);
+  }
+
+  .dotted-bg {
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0) 1px,
+      rgba(255, 255, 255, 0.178) 1px
+    );
+    background-size: 4px 4px;
+  }
 }
