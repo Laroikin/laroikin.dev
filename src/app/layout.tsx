@@ -1,10 +1,10 @@
 import './globals.css';
-import { Nunito } from 'next/font/google';
+import { Inter_Tight } from 'next/font/google';
 import Navbar from '@/components/navbar';
 
-const nunito = Nunito({
+const inter = Inter_Tight({
   subsets: ['latin'],
-  weight: ['400', '500', '700', '300', '600'],
+  weight: ['400', '500', '700', '300', '600', '900'],
 });
 
 export const metadata = {
@@ -20,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} min-h-screen bg-mauve-2 text-mauve-12`}
+        className={`${inter.className} min-h-screen bg-mauve-2 text-mauve-12`}
       >
         <Navbar />
-        <main className="m-auto max-w-4xl p-4">{children}</main>
+        <main className="m-auto max-w-4xl p-4 pt-8 antialiased">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -15,7 +15,10 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState(localStorage?.getItem('theme') ?? 'system');
+  const [theme, setTheme] = useState(
+    (typeof window !== 'undefined' && localStorage.getItem('theme')) ||
+      'system',
+  );
 
   useEffect(() => {
     if (theme === 'system') {

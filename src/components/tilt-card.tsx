@@ -43,7 +43,7 @@ export default function TiltCard({
             <div className="grow p-4">
               <span className="text-white">{title}</span>
             </div>
-            <div className="flex w-full items-center justify-between border-t border-white/30 dotted-bg px-4 py-2 backdrop-blur-3xl backdrop-saturate-150">
+            <div className="flex w-full items-center justify-between border-t border-white/30 dotted-bg px-4 py-2 backdrop-blur-3xl">
               {link}
               <IconArrowUpRight />
             </div>

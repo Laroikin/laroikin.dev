@@ -3,15 +3,12 @@ import TiltCard from '@/components/tilt-card';
 export default function Home() {
   return (
     <>
-      <p>
-        Building the{' '}
-        <span className="rounded bg-mauve-12 px-2 py-1 text-mauve-1">
-          Brightest
-        </span>{' '}
-        of the Futures, One Line of Code at a Time
+      <h1 className="mb-2 text-3xl font-bold">Laroikin</h1>
+      <p className="text-mauve-11 mb-4 text-lg">
+        Hi, I&apos;m Laroikin. I&apos;m a full-stack developer and a UI
+        designer, currently working at Habsida.
       </p>
-      <hr className="my-4 border-mauve-5" />
-      <h3>Work:</h3>
+      <h2 className='font-bold text-xl my-2'>Work Experience:</h2>
       <div className="grid grid-cols-3 gap-4">
         <TiltCard
           title="Habsida"

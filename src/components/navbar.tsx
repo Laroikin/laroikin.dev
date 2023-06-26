@@ -29,12 +29,15 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-mauve-5 bg-mauve-2/95 py-5 backdrop-blur-md backdrop-saturate-200">
-        <div className="m-auto flex max-w-4xl flex-row items-center justify-between px-4">
-          <div className="flex flex-row items-center gap-2">
+      <nav className="sticky top-0 z-50 border-b border-mauve-5 bg-mauve-2/95 py-5 backdrop-blur-md backdrop-saturate-200">
+        <div className="m-auto flex max-w-4xl flex-row items-center justify-between px-4 text-lg text-mauve-12">
+          <Link
+            href="/"
+            className="flex flex-row items-center gap-2 font-semibold"
+          >
             <LetterCarousel />
-            <h1 className="text-lg font-semibold text-mauve-12">Laroikin</h1>
-          </div>
+            <span className='mt-0.5'>Laroikin</span>
+          </Link>
           <div className="flex w-fit flex-row items-center">
             {routes.map((route) => (
               <AnimatePresence key={route.href} initial={false}>
@@ -75,7 +78,7 @@ export default function Navbar() {
             <ThemeSwitcher />
           </div>
         </div>
-      </header>
+      </nav>
     </>
   );
 }

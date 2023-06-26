@@ -67,5 +67,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('windy-radix-palette')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('windy-radix-palette'),
+    require('windy-radix-typography'),
+    require('@tailwindcss/typography'),
+  ],
 };

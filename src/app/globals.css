@@ -8,7 +8,11 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-200;
+    @apply bg-background text-foreground;
+  }
+
+  body * {
+    @apply transition-colors duration-100;
   }
 }
 
@@ -27,7 +31,7 @@
   .dotted-bg {
     background-image: radial-gradient(
       rgba(0, 0, 0, 0) 1px,
-      rgba(255, 255, 255, 0.178) 1px
+      rgba(255, 255, 255, 0.063) 1px
     );
     background-size: 4px 4px;
   }
