@@ -10,10 +10,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  body * {
-    @apply transition-colors duration-100;
-  }
 }
 
 @layer utilities {
