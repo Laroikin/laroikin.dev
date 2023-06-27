@@ -64,6 +64,9 @@ dependencies:
   react-parallax-tilt:
     specifier: ^1.7.149
     version: 1.7.149(react-dom@18.2.0)(react@18.2.0)
+  react-wrap-balancer:
+    specifier: ^1.0.0
+    version: 1.0.0(react@18.2.0)
   tailwind-merge:
     specifier: ^1.13.2
     version: 1.13.2
@@ -2978,6 +2981,14 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.5.3
+    dev: false
+
+  /react-wrap-balancer@1.0.0(react@18.2.0):
+    resolution: {integrity: sha512-yjDH+I8WGyDfh95gKhX/6ckfSBAltwQkxiYxtLPlyIRQNUVSjvz1uHR6Hpy+zHyOkJQw6GEC5RPglA41QXvzyw==}
+    peerDependencies:
+      react: '>=16.8.0 || ^17.0.0 || ^18'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react@18.2.0:

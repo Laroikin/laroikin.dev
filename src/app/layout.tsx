@@ -20,7 +20,7 @@ export default function RootLayout({
       >
         <Providers>
           <Navbar />
-          <main className="m-auto max-w-4xl p-4 pt-8 antialiased">
+          <main className="m-auto max-w-4xl p-4 pt-8 antialiased transition-transform duration-300">
             {children}
           </main>
         </Providers>

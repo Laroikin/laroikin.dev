@@ -34,16 +34,16 @@ export default function TiltCard({
           tiltMaxAngleY={5}
           glareColor="#ffffff"
           glarePosition="all"
-          className='w-full h-full'
+          className="h-full w-full"
           glareBorderRadius="0.75rem"
         >
           <div
-            className={`z-10 flex h-full flex-col justify-between overflow-hidden rounded-xl bg-gradient-to-br ${color} text-white duration-300 hover:shadow-xl hover:shadow-blackA-4`}
+            className={`z-10 flex h-full flex-col justify-between overflow-hidden rounded-xl bg-gradient-to-br ${color} p-2 text-white duration-300 hover:shadow-xl hover:shadow-blackA-4`}
           >
-            <div className="grow p-4">
+            <div className="grow p-2">
               <span className="text-white">{title}</span>
             </div>
-            <div className="flex w-full items-center justify-between border-t border-white/30 dotted-bg px-4 py-2 backdrop-blur-3xl">
+            <div className="transform-[translateZ(20px)] dotted-bg flex w-full items-center shadow-md justify-between rounded-md border-b border-r border-t border-white/30  border-b-white/5 border-r-white/20 px-4 py-2">
               {link}
               <IconArrowUpRight />
             </div>
