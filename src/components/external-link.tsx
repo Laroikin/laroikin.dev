@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
 import { ReactNode } from 'react';
 
 export default function ExternalLink({
@@ -13,7 +12,7 @@ export default function ExternalLink({
     <Link
       href={href}
       target="_blank"
-      className="underline font-medium underline-offset-4 transition duration-150 hover:text-mauve-12"
+      className="font-medium border-b border-mauve-8 hover:border-mauve-12 transition-[border-color] duration-150 text-mauve-12"
     >
       <span>{children}</span>
     </Link>

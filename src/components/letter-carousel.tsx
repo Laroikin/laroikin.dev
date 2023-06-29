@@ -1,15 +1,8 @@
 import { useReducer } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useInterval from '@/hooks/useInterval';
-import { Noto_Sans_KR } from 'next/font/google';
 import Logo from '../../public/logo.svg';
 import Image from 'next/image';
-
-const notoSansKr = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '300', '900'],
-  display: 'swap',
-});
 
 const LETTERS = ' 라로이킨 LAROIKIN'.split('');
 
@@ -28,7 +21,7 @@ export default function LetterCarousel() {
         {LETTERS[currentIndex % LETTERS.length] !== ' ' ? (
           <motion.p
             key={currentIndex}
-            className={'font-black ' + notoSansKr.className}
+            className={'font-bold'}
             animate={{ x: 0 }}
             initial={{ x: -50 }}
             exit={{ x: 50 }}

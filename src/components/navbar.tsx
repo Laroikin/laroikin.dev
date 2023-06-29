@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-mauve-5 bg-mauve-2/90 py-5 backdrop-blur-md backdrop-saturate-150">
+      <nav className="sticky top-0 z-50 border-b border-mauve-5 bg-mauve-2/90 py-4 backdrop-blur-md backdrop-saturate-150">
         <div className="m-auto flex max-w-4xl flex-row items-center justify-between px-4 text-lg text-mauve-12">
           <Link
             href="/"

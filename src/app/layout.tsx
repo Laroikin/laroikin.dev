@@ -1,12 +1,8 @@
 import './globals.css';
-import { Inter_Tight } from 'next/font/google';
 import Navbar from '@/components/navbar';
 import { Providers } from '@/components/providers';
 
-const inter = Inter_Tight({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '300', '600', '900'],
-});
+import { inter } from './fonts';
 
 export default function RootLayout({
   children,

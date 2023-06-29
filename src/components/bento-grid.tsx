@@ -2,6 +2,7 @@
 
 import TiltCard from '@/components/tilt-card';
 import { motion, Variants } from 'framer-motion';
+import NotesThingImg from '../../public/assets/img/NotesThing.jpg';
 
 const cardVariants: Variants = {
   onscreen: {
@@ -48,7 +49,7 @@ const bottom: Variants = {
 export default function BentoGrid() {
   return (
     <motion.div
-      className="grid grid-cols-3 gap-4"
+      className="relative grid sm:grid-cols-3 grid-cols-1 gap-4 overflow-hidden rounded-2xl border border-mauve-5 bg-mauve-3 p-4"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.3 }}
@@ -58,19 +59,19 @@ export default function BentoGrid() {
     >
       <motion.div
         variants={{ ...cardVariants, ...topLeftVariants }}
-        className="col-span-2 row-span-2 aspect-video"
+        className="z-10 sm:col-span-2 sm:row-span-2 sm:aspect-video aspect-square"
       >
         <TiltCard
-          title="Habsida"
+          title="NotesThing"
           subtitle="Frontend Developer"
           date="2022 - Now"
-          link="https://habsida.com"
-          color={'from-violet-8 to-crimson-9'}
+          link="https://notesthing.vercel.app"
+          imgSrc={NotesThingImg}
         />
       </motion.div>
       <motion.div
         variants={{ ...cardVariants, ...rightVariants }}
-        className="row-span-3"
+        className="z-10 sm:row-span-3 aspect-square sm:aspect-auto"
       >
         <TiltCard
           title="Habsida"
@@ -82,7 +83,7 @@ export default function BentoGrid() {
       </motion.div>
       <motion.div
         variants={{ ...cardVariants, ...bottomLeft }}
-        className="aspect-square"
+        className="z-10 aspect-square"
       >
         <TiltCard
           title="Habsida"
@@ -94,7 +95,7 @@ export default function BentoGrid() {
       </motion.div>
       <motion.div
         variants={{ ...cardVariants, ...bottom }}
-        className="aspect-square"
+        className="z-10 aspect-square"
       >
         <TiltCard
           title="Habsida"
