@@ -8,11 +8,12 @@ type Props = {
   };
 };
 
-async function getDocFromParams(slug: string) {
-  console.log(slug);
-  const blogpost = allBlogposts.find((blogpost) => blogpost.slugAsParams === slug);
+export async function generateStaticParams() {
+  return allBlogposts.map((blogpost) => ({ slug: blogpost.slugAsParams }));
+}
 
-  // console.log(allBlogposts);
+async function getDocFromParams(slug: string) {
+  const blogpost = allBlogposts.find((blogpost) => blogpost.slugAsParams === slug);
 
   if (!blogpost) notFound();
 
